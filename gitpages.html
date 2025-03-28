@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to Host a Website Using GitHub Pages - DragonX Software</title>
+
+  <!-- Link to your existing dark-themed stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <h1>DragonX Blog</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="https://github.com/DragonXSoftware" target="_blank">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="blog-hero">
+    <div class="hero-container">
+      <h2>Host Your Site for Free with GitHub Pages</h2>
+      <p>A quick guide to get your site online using GitHub’s free static hosting.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container content-section">
+      <h2>What is GitHub Pages?</h2>
+      <p>
+        <strong>GitHub Pages</strong> is a free hosting service that lets you publish static websites directly from a GitHub repository. If you're working with HTML, CSS, and JavaScript, it's one of the fastest ways to get a site live.
+      </p>
+
+      <h2>Step 1: Create Your Repository</h2>
+      <p>
+        Go to <a href="https://github.com/new" target="_blank">github.com/new</a> and create a new public repository. 
+        If you want to make a personal site, name it exactly like this:
+        <code>yourusername.github.io</code> (replace <code>yourusername</code> with your actual GitHub username).
+      </p>
+
+      <h2>Step 2: Add Your Website Files</h2>
+      <ol>
+        <li>Clone the repository to your computer with Git:</li>
+        <pre><code>git clone https://github.com/yourusername/yourusername.github.io</code></pre>
+        <li>Add your website files to the folder. Make sure you have an <code>index.html</code>.</li>
+        <li>Commit and push your changes:</li>
+        <pre><code>
+git add .
+git commit -m "Initial commit"
+git push origin main
+        </code></pre>
+      </ol>
+
+      <h2>Step 3: Enable GitHub Pages</h2>
+      <p>
+        Go to your repository on GitHub, then click <strong>Settings &gt; Pages</strong>.<br/>
+        Under “Source”, choose the branch to publish from (usually <code>main</code>) and click <strong>Save</strong>.<br/>
+        Your site will go live in a few seconds at <code>https://yourusername.github.io</code>.
+      </p>
+
+      <h2>Step 4: Optional - Add a Custom Domain</h2>
+      <p>
+        You can point your own domain (like <code>mycoolsite.com</code>) to your GitHub Pages site.
+        You’ll need to configure DNS records and add a <code>CNAME</code> file in your repo with your domain name inside it.
+      </p>
+      <p>
+        For full instructions, visit GitHub’s official guide:
+        <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site" target="_blank">
+          Configuring a custom domain
+        </a>.
+      </p>
+
+      <h2>Useful Tips</h2>
+      <ul>
+        <li>You can use a static site generator like Jekyll, Hugo, or Astro with GitHub Pages.</li>
+        <li>Every time you push changes to the branch you selected, your site automatically updates.</li>
+        <li>Use <code>.nojekyll</code> file in the root if you're not using Jekyll and want to avoid GitHub's auto-parsing.</li>
+      </ul>
+
+      <h2>Wrapping Up</h2>
+      <p>
+        GitHub Pages is perfect for coders who want a fast, simple, and free way to publish their work.
+        Whether you're showing off projects, writing technical blogs, or deploying tools like this site—GitHub Pages is a great choice.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 DragonX Software. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
