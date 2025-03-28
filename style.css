@@ -234,3 +234,8 @@
     margin-top: 3rem;
   }
   
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* spacing between text and image */
+  }
