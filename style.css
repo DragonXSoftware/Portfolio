@@ -1,0 +1,124 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  header {
+    background-color: #222;
+    padding: 1rem 0;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo h1 {
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: default;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #fdae1a;
+  }
+  
+  /* Hero Section */
+  #hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://via.placeholder.com/1200x600/000/fff?text=Hero+Banner') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 0;
+  }
+  
+  .hero-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #fdae1a;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ffc84a;
+  }
+  
+  /* Content Sections */
+  .content-section {
+    padding: 3rem 0;
+    background-color: #fff;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+  }
+  
+  /* About / Projects / Blog Teaser Titles */
+  .content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+  }
+  
+  .footer-container p a {
+    color: #fdae1a;
+    text-decoration: none;
+  }
+  
+  .footer-container p a:hover {
+    text-decoration: underline;
+  }
+  
