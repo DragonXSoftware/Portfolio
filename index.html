@@ -4,7 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>downloadmonitorlizard.com | Austin's Portfolio</title>
-  <!-- Link to External CSS -->
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,7 +21,9 @@
       </div>
       <nav>
         <ul class="nav-links">
+          <!-- Link to your GitHub -->
           <li><a href="https://github.com/DragonXSoftware" target="_blank">Projects</a></li>
+          <!-- Link directly to blog.html if it's in the same folder -->
           <li><a href="blog.html">Blog</a></li>
           <li><a href="https://www.linkedin.com/in/austin-schwebel/" target="_blank">Contact</a></li>
         </ul>
@@ -24,15 +31,15 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
+  <!-- Hero Section with Background Image -->
+  <section id="hero" class="hero">
     <div class="hero-container">
       <h2>Welcome to My World of Code</h2>
       <p>
         I'm Austin, a passionate coder who loves building websites, hacking GBA ROMs, 
         and creating innovative tools.
       </p>
-      <a href="#projects" class="btn">Explore My Projects</a>
+      <a href="#projects" class="btn hero-btn">Explore My Projects</a>
     </div>
   </section>
 
@@ -40,12 +47,21 @@
   <main>
     <!-- About Section -->
     <section id="about" class="content-section">
-      <div class="container">
+      <div class="container about-container">
         <h2>About Me</h2>
         <p>
-          With years of hands-on experience and a constant drive to innovate, I merge creativity 
-          with technology. Whether I’m crafting a new web app or diving deep into game ROM hacking, 
-          every project is a new adventure.
+          Hello! I’m Austin—a passionate coder, tech enthusiast, and perpetual tinkerer. 
+          My curiosity knows no bounds: I love building websites, hacking GBA ROMs, 
+          and exploring all sorts of creative coding projects. With an ever-growing skill set that includes 
+          Java, Python, HTML/CSS, OOP, and Maven, I dive into each challenge ready to learn something new.
+          I thrive on turning innovative ideas into functional software. From spinning up SaaS solutions
+          in the cloud to experimenting with OBS for live streaming, I’m always looking for the next project 
+          that will push my boundaries. I believe in the power of open-source collaboration—sharing knowledge, 
+          debugging together, and celebrating breakthroughs with fellow coders keeps me inspired.
+          Whether I’m crafting a brand-new web app, reverse-engineering a classic game, or fine-tuning a UI
+          for a smoother user experience, my focus is on merging creativity with technology. Thanks for visiting 
+          my corner of the internet, and I look forward to connecting with like-minded enthusiasts to turn big ideas 
+          into reality!
         </p>
       </div>
     </section>
@@ -58,7 +74,16 @@
           From custom tools to full-stack applications, I love building and experimenting 
           with code. Check out my work and see how each project helps me learn something new.
         </p>
-        <!-- You can add individual project cards or links here -->
+        <!-- Add links or cards for your specific projects here -->
+      </div>
+    </section>
+
+    <!-- Call-to-Action Section (Optional) -->
+    <section id="cta" class="cta-section">
+      <div class="container cta-container">
+        <h2>Want to Connect?</h2>
+        <p>Drop me a line or check out my blog for the latest adventures in coding!</p>
+        <a href="blog.html" class="btn cta-btn">Read My Blog</a>
       </div>
     </section>
 
