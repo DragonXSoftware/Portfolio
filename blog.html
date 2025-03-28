@@ -4,39 +4,64 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Blog - DragonX Software</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Use the same CSS as your index.html for a consistent look -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>My Blog</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="portfolio.html">Projects</a>
-    </nav>
+    <div class="container header-container">
+      <div class="logo">
+        <h1>DragonX Blog</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <!-- Ensure these links align with your actual site structure -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- Hero Section for the Blog Page (Optional) -->
+  <section id="hero" class="blog-hero">
+    <div class="hero-container">
+      <h2>Welcome to My Coding Adventures</h2>
+      <p>Stay updated with my latest tutorials, experiments, and project deep-dives.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
   <main>
-    <div id="blog-posts">
-      <!-- Blog posts will load here dynamically -->
+    <div class="container" id="blog-posts-container">
+      <h2 class="section-title">Recent Posts</h2>
+      <div id="blog-posts">
+        <!-- Blog posts will load here dynamically via JavaScript -->
+      </div>
     </div>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 DragonX Software. All Rights Reserved.</p>
+    <div class="container footer-container">
+      <p>&copy; 2025 DragonX Software. All Rights Reserved.</p>
+    </div>
   </footer>
 
+  <!-- Script to Fetch and Render Blog Posts -->
   <script>
-    // Fetch blog posts from posts.json and render them
     fetch('posts.json')
       .then(response => response.json())
       .then(data => {
         const postsContainer = document.getElementById('blog-posts');
+        
         if (data.posts && data.posts.length) {
           data.posts.forEach(post => {
             const postElement = document.createElement('div');
             postElement.classList.add('post');
             postElement.innerHTML = `
-              <h2><a href="${post.url}">${post.title}</a></h2>
+              <h2 class="post-title"><a href="${post.url}">${post.title}</a></h2>
               <p class="post-date">${new Date(post.date).toLocaleDateString()}</p>
               <p class="post-excerpt">${post.excerpt}</p>
             `;
