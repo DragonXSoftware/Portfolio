@@ -244,3 +244,55 @@
     height: 40px;
     width: auto;
   }
+/* ========================
+   RESPONSIVE MOBILE STYLES
+======================== */
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-left: 0;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .hero-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-container p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .hero-btn {
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .content-section {
+    padding: 2rem 1rem;
+  }
+
+  .content-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .content-section p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+  }
+}
