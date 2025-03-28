@@ -239,3 +239,8 @@
     align-items: center;
     gap: 10px; /* spacing between text and image */
   }
+  
+  .logo-wrapper img {
+    height: 60px;
+    width: auto;
+  }
