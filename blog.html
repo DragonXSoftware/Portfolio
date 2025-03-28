@@ -16,9 +16,9 @@
       </div>
       <nav>
         <ul class="nav-links">
-          <!-- Ensure these links align with your actual site structure -->
+          <!-- Update paths or add new links if needed -->
           <li><a href="index.html">Home</a></li>
-          <li><a href="https://github.com/DragonXSoftware">Projects</a></li>
+          <li><a href="https://github.com/DragonXSoftware" target="_blank">Projects</a></li>
         </ul>
       </nav>
     </div>
@@ -35,9 +35,28 @@
   <!-- Main Content -->
   <main>
     <div class="container" id="blog-posts-container">
-      <h2 class="section-title">Recent Posts</h2>
-      <div id="blog-posts">
-        <!-- Blog posts will load here dynamically via JavaScript -->
+      <h2 class="section-title">My First Post</h2>
+
+      <!-- Statically placed single post -->
+      <div class="post">
+        <!-- Title & Link -->
+        <h2 class="post-title">
+          <a href="https://stackoverflow.com" target="_blank">
+            Why Stack Overflow Is Every Developer’s Friend
+          </a>
+        </h2>
+
+        <!-- Date (modify as you wish) -->
+        <p class="post-date">March 28, 2025</p>
+
+        <!-- Content -->
+        <p class="post-excerpt">
+          Whether you’re a seasoned software engineer or just starting out, 
+          <strong>Stack Overflow</strong> is an invaluable resource for quickly finding answers, 
+          discovering best practices, and getting inspired by community-driven solutions. 
+          In this post, I’ll share how Stack Overflow helped me level up my coding skills, 
+          collaborate better with peers, and ultimately become a more confident developer.
+        </p>
       </div>
     </div>
   </main>
@@ -48,33 +67,5 @@
       <p>&copy; 2025 DragonX Software. All Rights Reserved.</p>
     </div>
   </footer>
-
-  <!-- Script to Fetch and Render Blog Posts -->
-  <script>
-    fetch('posts.json')
-      .then(response => response.json())
-      .then(data => {
-        const postsContainer = document.getElementById('blog-posts');
-        
-        if (data.posts && data.posts.length) {
-          data.posts.forEach(post => {
-            const postElement = document.createElement('div');
-            postElement.classList.add('post');
-            postElement.innerHTML = `
-              <h2 class="post-title"><a href="${post.url}">${post.title}</a></h2>
-              <p class="post-date">${new Date(post.date).toLocaleDateString()}</p>
-              <p class="post-excerpt">${post.excerpt}</p>
-            `;
-            postsContainer.appendChild(postElement);
-          });
-        } else {
-          postsContainer.innerHTML = '<p>No posts available yet.</p>';
-        }
-      })
-      .catch(error => {
-        console.error('Error fetching blog posts:', error);
-        document.getElementById('blog-posts').innerHTML = '<p>Error loading posts.</p>';
-      });
-  </script>
 </body>
 </html>
