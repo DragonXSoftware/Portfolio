@@ -237,7 +237,7 @@
   .logo-wrapper {
     display: flex;
     align-items: center;
-    gap: 10px; /* spacing between text and image */
+    gap: 100px; /* spacing between text and image */
   }
   
   .logo-wrapper img {
