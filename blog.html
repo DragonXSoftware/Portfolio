@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Blog - DragonX Software</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="blog-posts">
+      <!-- Blog posts will load here dynamically -->
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DragonX Software. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Fetch blog posts from posts.json and render them
+    fetch('posts.json')
+      .then(response => response.json())
+      .then(data => {
+        const postsContainer = document.getElementById('blog-posts');
+        if (data.posts && data.posts.length) {
+          data.posts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.classList.add('post');
+            postElement.innerHTML = `
+              <h2><a href="${post.url}">${post.title}</a></h2>
+              <p class="post-date">${new Date(post.date).toLocaleDateString()}</p>
+              <p class="post-excerpt">${post.excerpt}</p>
+            `;
+            postsContainer.appendChild(postElement);
+          });
+        } else {
+          postsContainer.innerHTML = '<p>No posts available yet.</p>';
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching blog posts:', error);
+        document.getElementById('blog-posts').innerHTML = '<p>Error loading posts.</p>';
+      });
+  </script>
+</body>
+</html>
