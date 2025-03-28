@@ -3,32 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>downloadmonitorlizard.com</title>
+  <title>downloadmonitorlizard.com | Austin's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Optionally add Google Fonts or icons here -->
 </head>
 <body>
+  <!-- Header with Navigation -->
   <header>
-    <h1>Welcome to My Vibe Coding Space</h1>
-    <nav>
-      <a href="portfolio/">Projects</a>
-      <a href="blog/">Blog</a>
-    </nav>
+    <div class="container header-container">
+      <div class="logo">
+        <h1>Austin's Code Lab</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="portfolio/">Projects</a></li>
+          <li><a href="blog/">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container hero-container">
+      <h2>Welcome to My World of Code</h2>
+      <p>
+        I'm Austin, a passionate coder who loves building websites, hacking GBA ROMs, and creating innovative tools.
+      </p>
+      <a href="portfolio/" class="btn">Explore My Projects</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- About Section -->
+    <section id="about">
       <h2>About Me</h2>
-      <p>Hey! I’m Austin, a coder who loves messing with GBA ROMs, building websites, and more.</p>
+      <p>
+        With years of hands-on experience and a constant drive to innovate, I merge creativity with technology. Whether I’m crafting a new web app or diving deep into game ROM hacking, every project is a new adventure.
+      </p>
     </section>
 
-    <section>
+    <!-- Featured Project Section -->
+    <section id="featured">
       <h2>Featured Project</h2>
-      <p>Check out my <a href="portfolio/pokemon-editor.html">Pokémon Editor</a> to see how I hacked GBA ROMs!</p>
+      <article class="project">
+        <img src="assets/images/pokemon-editor-thumbnail.jpg" alt="Pokémon Editor Thumbnail" />
+        <div class="project-info">
+          <h3><a href="portfolio/pokemon-editor.html">Pokémon Editor</a></h3>
+          <p>
+            Dive into my journey of building a tool for editing Pokémon data by hacking GBA ROMs. Discover the challenges, breakthroughs, and the creative process behind it.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Latest Blog Section -->
+    <section id="latest-blog">
+      <h2>Latest Blog Post</h2>
+      <article class="blog-post">
+        <h3><a href="blog/">Read My Latest Thoughts</a></h3>
+        <p>
+          Explore in-depth write-ups, tutorials, and insights from my coding adventures. Visit my blog to learn more about each project and the tech behind them.
+        </p>
+      </article>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 My Website Vibes</p>
+  <!-- Footer / Contact Section -->
+  <footer id="contact">
+    <div class="container footer-container">
+      <p>&copy; 2025 downloadmonitorlizard.com. All rights reserved.</p>
+      <p>Email: <a href="mailto:austin@example.com">austin@example.com</a></p>
+    </div>
   </footer>
 </body>
 </html>
