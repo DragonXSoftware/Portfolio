@@ -9,13 +9,15 @@
   
   /* Use a more universal font-stack or import a font if you like */
   body {
-    font-family: Arial, sans-serif;
-    /* Main background is now dark */
-    background-color: #1b1b1b;
-    /* Lighter text color for contrast */
-    color: #eaeaea; 
-    line-height: 1.6;
     font-family: 'Press Start 2P', monospace;
+    background-color: #1b1b1b;
+    color: #eaeaea;
+    line-height: 1.6;
+  
+    /* These help with mobile scaling */
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem; /* or adjust as needed */
   }
   
   /* Container for alignment */
