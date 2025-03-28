@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>downloadmonitorlizard.com | Austin's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Optionally add Google Fonts or icons here -->
 </head>
 <body>
   <!-- Header with Navigation -->
@@ -16,8 +15,9 @@
       </div>
       <nav>
         <ul class="nav-links">
-          <li><a href="portfolio/">Projects</a></li>
-          <li><a href="blog/">Blog</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <!-- Link directly to blog.html if it's in the same folder -->
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -26,48 +26,50 @@
 
   <!-- Hero Section -->
   <section id="hero">
-    <div class="container hero-container">
+    <div class="hero-container">
       <h2>Welcome to My World of Code</h2>
       <p>
         I'm Austin, a passionate coder who loves building websites, hacking GBA ROMs, and creating innovative tools.
       </p>
-      <a href="portfolio/" class="btn">Explore My Projects</a>
+      <a href="#projects" class="btn">Explore My Projects</a>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="container">
+  <main>
     <!-- About Section -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        With years of hands-on experience and a constant drive to innovate, I merge creativity with technology. Whether I’m crafting a new web app or diving deep into game ROM hacking, every project is a new adventure.
-      </p>
-    </section>
-
-    <!-- Featured Project Section -->
-    <section id="featured">
-      <h2>Featured Project</h2>
-      <article class="project">
-        <img src="assets/images/pokemon-editor-thumbnail.jpg" alt="Pokémon Editor Thumbnail" />
-        <div class="project-info">
-          <h3><a href="portfolio/pokemon-editor.html">Pokémon Editor</a></h3>
-          <p>
-            Dive into my journey of building a tool for editing Pokémon data by hacking GBA ROMs. Discover the challenges, breakthroughs, and the creative process behind it.
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <!-- Latest Blog Section -->
-    <section id="latest-blog">
-      <h2>Latest Blog Post</h2>
-      <article class="blog-post">
-        <h3><a href="blog.html">Read My Latest Thoughts</a></h3>
+    <section id="about" class="content-section">
+      <div class="container">
+        <h2>About Me</h2>
         <p>
-          Explore in-depth write-ups, tutorials, and insights from my coding adventures. Visit my blog to learn more about each project and the tech behind them.
+          With years of hands-on experience and a constant drive to innovate, I merge creativity with technology. 
+          Whether I’m crafting a new web app or diving deep into game ROM hacking, every project is a new adventure.
         </p>
-      </article>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="content-section">
+      <div class="container">
+        <h2>My Projects</h2>
+        <p>
+          From custom tools to full-stack applications, I love building and experimenting with code. 
+          Check out my work and see how each project helps me learn something new.
+        </p>
+        <!-- Add links or cards for your specific projects here -->
+      </div>
+    </section>
+
+    <!-- Blog Teaser Section -->
+    <section id="blog-teaser" class="content-section">
+      <div class="container">
+        <h2>Latest Blog Post</h2>
+        <p>
+          Explore in-depth write-ups, tutorials, and insights from my coding adventures. 
+          Visit my blog to learn more about each project and the tech behind them.
+        </p>
+        <a href="blog.html" class="btn">Visit Blog</a>
+      </div>
     </section>
   </main>
 
