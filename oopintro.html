@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mastering OOP - DragonX Blog</title>
+
+  <!-- Google Font & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <div class="logo-wrapper">
+          <h1>DragonX Blog</h1>
+          <img src="dragonsidelogo.png" alt="Dragon breathing fire" />
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="blog-hero">
+    <div class="hero-container">
+      <h2>🐉 Mastering OOP 🧠</h2>
+      <p>Why Object-Oriented Programming Still Dominates Modern Software</p>
+    </div>
+  </section>
+
+  <!-- Main Post Content -->
+  <main>
+    <div class="container content-section">
+      <h2>Object-Oriented Programming: The Core Concepts</h2>
+      <p>
+        OOP isn’t just theory — it’s the backbone of maintainable software in Java, Python, and many other languages. Here are the <strong>four pillars</strong> that make OOP so powerful:
+      </p>
+
+      <h3>🧱 1. Encapsulation</h3>
+      <p>
+        Encapsulation means bundling data and the methods that operate on it into a single unit (class), and restricting direct access to some of the object's components.
+      </p>
+      <pre><code>// Java
+class User {
+  private String name;
+
+  public User(String name) {
+    this.name = name;
+  }
+
+  public String getName() {
+    return name;
+  }
+}
+      </code></pre>
+
+      <pre><code># Python
+class User:
+    def __init__(self, name):
+        self.__name = name  # private variable
+
+    def get_name(self):
+        return self.__name
+</code></pre>
+
+      <h3>🧬 2. Inheritance</h3>
+      <p>
+        Inheritance lets one class inherit the properties and methods of another. It's the backbone of code reuse.
+      </p>
+      <pre><code>// Java
+class Animal {
+  void speak() {
+    System.out.println("I make noise.");
+  }
+}
+
+class Dog extends Animal {
+  void speak() {
+    System.out.println("Bark!");
+  }
+}
+</code></pre>
+
+      <pre><code># Python
+class Animal:
+    def speak(self):
+        print("I make noise.")
+
+class Dog(Animal):
+    def speak(self):
+        print("Bark!")
+</code></pre>
+
+      <h3>🎭 3. Polymorphism</h3>
+      <p>
+        Polymorphism allows methods to behave differently based on the object calling them.
+      </p>
+      <pre><code>// Java
+Animal myDog = new Dog();
+myDog.speak(); // Output: Bark!
+</code></pre>
+
+      <pre><code># Python
+animal = Dog()
+animal.speak()  # Output: Bark!
+</code></pre>
+
+      <h3>🧠 4. Abstraction</h3>
+      <p>
+        Abstraction hides complex logic and shows only the relevant details.
+      </p>
+      <pre><code>// Java
+abstract class Shape {
+  abstract void draw();
+}
+
+class Circle extends Shape {
+  void draw() {
+    System.out.println("Drawing Circle");
+  }
+}
+</code></pre>
+
+      <pre><code># Python
+from abc import ABC, abstractmethod
+
+class Shape(ABC):
+    @abstractmethod
+    def draw(self):
+        pass
+
+class Circle(Shape):
+    def draw(self):
+        print("Drawing Circle")
+</code></pre>
+
+      <p>
+        These four pillars — <strong>Encapsulation, Inheritance, Polymorphism, and Abstraction</strong> — are essential to writing scalable and reusable code. Once you master OOP, writing maintainable code becomes second nature.
+      </p>
+
+      <p>Got questions about OOP or want to see how I use it in real projects? <a href="mailto:abschw0421@gmail.com">Hit me up!</a></p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+<footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 DragonX Software. Licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GPLv3</a>.</p>
+      <p>Email: <a href="mailto:abschw0421@gmail.com">abschw0421@gmail.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
