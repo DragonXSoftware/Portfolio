@@ -32,6 +32,12 @@
         </ul>
       </nav>
     </div>
+    <script>
+      if (!localStorage.getItem("loggedIn")) {
+        window.location.href = "login.html";
+      }
+    </script>
+    
   </header>
 
   <!-- Hero Section with Background Image -->
