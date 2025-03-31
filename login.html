@@ -108,7 +108,7 @@
 
   console.log('Submitting:', payload);
 
-  fetch("http://192.168.1.93:8080/auth", {
+  fetch("/auth", {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
