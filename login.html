@@ -92,31 +92,42 @@
     }
 
     function handleAuth() {
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-      const confirm = document.getElementById('confirm').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+  const confirm = document.getElementById('confirm').value;
 
-      if (!email.includes('@')) return alert('Enter a valid email.');
-      if (password.length < 6) return alert('Password must be at least 6 characters.');
-      if (mode === 'signup' && password !== confirm) return alert("Passwords don't match.");
+  if (!email.includes('@')) return alert('Enter a valid email.');
+  if (password.length < 6) return alert('Password must be at least 6 characters.');
+  if (mode === 'signup' && password !== confirm) return alert("Passwords don't match.");
 
-      const payload = {
-        email,
-        password,
-        mode
-      };
+  const payload = {
+    email,
+    password,
+    mode
+  };
 
-      console.log('Submitting:', payload);
+  console.log('Submitting:', payload);
 
-      // Placeholder for fetch() to backend
-      // fetch('/auth', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(payload)
-      // })
-      // .then(res => res.json())
-      // .then(data => console.log(data));
+  fetch("http://192.168.1.93:8080/auth", {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(res => res.text())
+  .then(data => {
+    console.log("Server says:", data);
+    alert(data);
+    if (data.includes("success") || data.includes("created")) {
+      localStorage.setItem("loggedIn", "true");
+      window.location.href = "index.html";
     }
+  })
+  .catch(err => {
+    console.error("Error contacting server:", err);
+    alert("Failed to connect to login server.");
+  });
+}
+
 
     function loginAsGuest() {
       localStorage.setItem("loggedIn", "true");
