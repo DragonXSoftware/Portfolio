@@ -15,21 +15,29 @@
   <!-- HEADER -->
   <header>
     <div class="container header-container">
-
-      <!-- Or just a text logo -->
       <div class="logo">
-        <h1>DragonX Software</h1>
+        <h1>Austin's Code Lab</h1>
       </div>
-
-      <!-- NAVIGATION -->
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="https://www.linkedin.com/in/austin-schwebel/">Contact</a></li>
-      </ul>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="https://www.linkedin.com/in/austin-schwebel/">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="user-menu">
+        <div class="user-icon" id="userIcon"></div>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <p style="margin: 0 0 10px; font-size: 0.85rem;">
+            👤 <span id="dropdownUser">User</span>
+          </p>
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </div>
     </div>
   </header>
+
 
   <!-- HERO SECTION -->
   <section id="hero">
@@ -101,6 +109,7 @@
       <p>Email: <a href="mailto:abschw0421@gmail.com">abschw0421@gmail.com</a></p>
     </div>
   </footer>
-
+  <!-- JavaScript for User Menu -->
+  <script src="scripts.js"></script>
 </body>
 </html>

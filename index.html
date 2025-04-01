@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Austin's Portfolio | downloadmonitorlizard.com</title>
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
 
-  <!--favicon-->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
   <!-- Main Stylesheet -->
@@ -31,16 +31,19 @@
           <li><a href="https://www.linkedin.com/in/austin-schwebel/" target="_blank">Contact</a></li>
         </ul>
       </nav>
+      <div class="user-menu">
+        <div class="user-icon" id="userIcon"></div>
+        <div class="dropdown-menu" id="dropdownMenu">
+          <p style="margin: 0 0 10px; font-size: 0.85rem;">
+            👤 <span id="dropdownUser">User</span>
+          </p>
+          <button id="logoutBtn">Logout</button>
+        </div>
+      </div>
     </div>
-    <script>
-      if (!localStorage.getItem("loggedIn")) {
-        window.location.href = "login.html";
-      }
-    </script>
-    
   </header>
 
-  <!-- Hero Section with Background Image -->
+  <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="hero-container">
       <h2>Welcome to My World of Code</h2>
@@ -66,25 +69,31 @@
       </div>
     </section>
 
-    <!--OG DOWNLOAD MONITOR EXPLAINED-->
+    <!-- Download Monitor Lizard Section -->
     <section id="downloadmonitor" class="content-section">
       <div class="container">
         <h2>Download Monitor Lizard</h2>
         <p>
-         Donload Monitor Lizard "DML" was originally created to showcase a Linux-based GUI that leveraged Clamscan-AV and other technologies to have a free antivirus software running on your linux machine.
+          <strong>Download</strong> Monitor Lizard "DML" was originally created to showcase a Linux-based GUI 
+          that leveraged Clamscan-AV and other technologies to provide free antivirus software for your Linux machine.
         </p>
-        <a href="https://www.youtube.com/watch?v=QsEKoTcYX4Q" class="btn">DML Youtube</a>
+        <a href="https://www.youtube.com/watch?v=QsEKoTcYX4Q" class="btn">DML YouTube</a>
         <a href="https://github.com/downloadmonitorlizard/DownloadMonitor" class="btn">DML GitHub</a>
       </div>
     </section>
   </main>
 
- <!-- Footer -->
-<footer>
-  <div class="container footer-container">
-    <p>&copy; 2025 DragonX Software. Licensed under <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GPLv3</a>.</p>
-    <p>Email: <a href="mailto:abschw0421@gmail.com">abschw0421@gmail.com</a></p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 DragonX Software. Licensed under 
+        <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank">GPLv3</a>.
+      </p>
+      <p>Email: <a href="mailto:abschw0421@gmail.com">abschw0421@gmail.com</a></p>
+    </div>
+  </footer>
+  <!-- JavaScript -->
+  <script src="scripts.js"></script>
+
 </body>
 </html>
